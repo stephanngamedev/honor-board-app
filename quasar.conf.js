@@ -38,7 +38,17 @@ module.exports = function (ctx) {
         'QList',
         'QItem',
         'QItemSection',
-        'QItemLabel'
+        'QItemLabel',
+        'QCard',
+        'QCardSection',
+        'QBreadcrumbs',
+        'QBreadcrumbsEl',
+        'QExpansionItem',
+        'QSpace',
+        'QAvatar',
+        'QInnerLoading',
+        'QSpinnerCube',
+        'QBadge'
       ],
 
       directives: [
@@ -58,7 +68,7 @@ module.exports = function (ctx) {
 
     build: {
       scopeHoisting: true,
-      // vueRouterMode: 'history',
+      vueRouterMode: 'history',
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
