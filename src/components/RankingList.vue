@@ -1,19 +1,18 @@
 <template lang="pug">
-  #ranking
-    skeleton(active, :title="false", :rows="20", :loading="isLoading")
-
-    q-list
-      ranking-list-item(v-for="rank in ranking", :rank="rank", :key="rank.participantUsername")
+  #ranking-list
+    content-placeholder(active, :title="false", :rows="20", :loading="isLoading")
+      q-list
+        ranking-list-item(v-for="rank in ranking", :rank="rank", :key="rank.participantUsername")
 </template>
 
 <script>
 import RankingListItem from 'components/RankingListItem'
-import Skeleton from 'components/Skeleton'
+import ContentPlaceholder from 'components/shared/ContentPlaceholder'
 
 export default {
   components: {
     RankingListItem,
-    Skeleton
+    ContentPlaceholder
   },
 
   data () {

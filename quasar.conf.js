@@ -26,33 +26,38 @@ module.exports = function (ctx) {
       // all: true, // --- includes everything; for dev only!
 
       components: [
-        'QLayout',
-        'QHeader',
-        'QDrawer',
-        'QPageContainer',
-        'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
-        'QList',
-        'QItem',
-        'QItemSection',
-        'QItemLabel',
-        'QCard',
-        'QCardSection',
+        'QAvatar',
+        'QBadge',
         'QBreadcrumbs',
         'QBreadcrumbsEl',
+        'QBtn',
+        'QCard',
+        'QCardSection',
+        'QDialog',
+        'QDrawer',
         'QExpansionItem',
+        'QHeader',
+        'QIcon',
+        'QInput',
+        'QItem',
+        'QItemLabel',
+        'QItemSection',
+        'QLayout',
+        'QList',
+        'QMenu',
+        'QOptionGroup',
+        'QPage',
+        'QPageContainer',
+        'QSeparator',
+        'QSlideItem',
         'QSpace',
-        'QAvatar',
-        'QInnerLoading',
-        'QSpinnerCube',
-        'QBadge'
+        'QToolbar',
+        'QToolbarTitle'
       ],
 
       directives: [
-        'Ripple'
+        'Ripple',
+        'ClosePopup'
       ],
 
       // Quasar plugins

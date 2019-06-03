@@ -6,7 +6,15 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/Ranking.vue') }
     ]
-  }
+  },
+
+  {
+    path: '/achievements',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Achievements.vue') }
+    ]
+  },
 ]
 
 // Always leave this as last one

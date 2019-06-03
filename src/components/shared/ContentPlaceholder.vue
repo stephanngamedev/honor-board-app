@@ -1,9 +1,9 @@
 <template lang="pug">
-  .h-skeleton
-    .h-skeleton-content(v-if="loading", :class="{ 'h-skeleton-active' : active }")
-      h3.h-skeleton-title(v-if="title", :style="{ 'width': titleWidth }")
+  .content-placeholder
+    .content-placeholder-content(v-if="loading", :class="{ 'content-placeholder-active' : active }")
+      h3.content-placeholder-title(v-if="title", :style="{ 'width': titleWidth }")
 
-      ul.h-skeleton-paragraph.q-pa-none
+      ul.content-placeholder-paragraph.q-pa-none
         li(v-for="(item, index) in rows" :key="index")
 
     template(v-else)
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'hSkeleton',
+  name: 'ContentPlaceholder',
   props: {
     loading: {
       type: Boolean,
@@ -43,10 +43,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  skeleton-bg = #F2F2F2
-	skeleton-height = 16px
+  content-placeholder-bg = #F2F2F2
+	content-placeholder-height = 16px
 
-  @keyframes h-skeleton-loading
+  @keyframes content-placeholder-loading
     0%
       background-position: 100% 50%
 
@@ -54,28 +54,28 @@ export default {
       background-position: 0 50%
 
 
-  .h-skeleton-content
-    .h-skeleton-title
-      height: skeleton-height
+  .content-placeholder-content
+    .content-placeholder-title
+      height: content-placeholder-height
       margin-top: 16px
-      background: skeleton-bg
+      background: content-placeholder-bg
 
-    .h-skeleton-paragraph
+    .content-placeholder-paragraph
       margin-top: 24px
       > li
         width: 100%
-        height: skeleton-height
+        height: content-placeholder-height
         list-style: none
-        background: skeleton-bg
+        background: content-placeholder-bg
 
       > li+li
         margin-top: 16px
 
 
-    &.h-skeleton-active
-      .h-skeleton-title, .h-skeleton-paragraph>li
+    &.content-placeholder-active
+      .content-placeholder-title, .content-placeholder-paragraph>li
         background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%)
         background-size: 400% 100%
-        animation: h-skeleton-loading 1.4s ease infinite
+        animation: content-placeholder-loading 1.4s ease infinite
 </style>
 
