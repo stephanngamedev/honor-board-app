@@ -32,6 +32,7 @@ module.exports = function (ctx) {
         'QBreadcrumbsEl',
         'QBtn',
         'QCard',
+        'QCardActions',
         'QCardSection',
         'QDialog',
         'QDrawer',

@@ -7,6 +7,7 @@
       q-option-group(inline, :options="achievementTypes", v-model="resource.achievementType")
 
       q-input.q-py-md(
+        filled,
         v-model="resource.title",
         label="Title",
         :error="errorFor('title') != null",
@@ -14,6 +15,7 @@
       )
 
       q-input.q-py-md(
+        filled,
         v-model.number="resource.points",
         type="number",
         label="Points",
@@ -22,6 +24,7 @@
       )
 
       q-input.q-py-md(
+        filled,
         v-model="resource.order",
         label="Order",
         :error="errorFor('order') != null",
@@ -57,6 +60,7 @@ export default {
   methods: {
     open (achievement) {
       this.$refs.form.open(achievement || this.achievementTemplate)
+      // EMIT SUCCESS EVENT TO RELOAD LIST
     }
   }
 }

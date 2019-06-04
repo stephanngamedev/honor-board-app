@@ -36,7 +36,7 @@ export default {
     },
 
     showError (error) {
-      this.$q.notify({ message: error.message, color: 'negative' })
+      this.$q.notify({ message: 'There was a problem loading the data.', color: 'negative' })
     },
 
     finishLoading () {

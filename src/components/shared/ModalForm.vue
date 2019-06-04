@@ -6,7 +6,7 @@
     transition-show="slide-up",
     transition-hide="slide-down"
   )
-    q-card
+    q-card.q-pa-sm
       .row.justify-center
         .col-md-6.col-xs-12
           content-placeholder(active, :title="false", :rows="10", :loading="isLoading")
@@ -17,10 +17,10 @@
             q-card-section
               slot(name="fields", :resource="resource", :errorFor="errorFor")
 
-      .row.justify-center.q-py-md
+      .row.justify-center
         .col-md-6.col-xs-12.text-right.q-gutter-sm
           q-btn(flat, :disabled="isSubmitting", @click="close") Cancel
-          q-btn(unelevated, :disabled="isLoading", :loading="isSubmitting", color="primary", @click="save") Save
+          q-btn(unelevated, :disabled="isLoading", :loading="isSubmitting", color="accent", @click="save") Save
 </template>
 
 <script>
@@ -64,7 +64,7 @@ export default {
         this.startLoading()
         this.load(resource.id)
       } else {
-        this.resource = resource
+        this.resource = { ...resource }
       }
     },
 
